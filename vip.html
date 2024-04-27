@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mr - Wopi | Cracker VPN</title>
+    <title>tesst805 - Sub Info</title>
     <style>
         .asli {
             background: url('https://4kwallpapers.com/images/walls/thumbs_3t/11574.jpeg') no-repeat;
@@ -13,6 +14,15 @@
         }
     </style>
     <style>
+        /*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
+
+        /*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
         *,
         ::before,
         ::after {
@@ -30,6 +40,15 @@
         ::after {
             --tw-content: '';
         }
+
+        /*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
 
         html {
             line-height: 1.5;
@@ -49,6 +68,10 @@
             /* 6 */
         }
 
+        /*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
 
         body {
             margin: 0;
@@ -57,6 +80,11 @@
             /* 2 */
         }
 
+        /*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
 
         hr {
             height: 0;
@@ -3152,7 +3180,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
     <!-- <link rel="stylesheet" href="../output.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs-i18n@2.4.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
@@ -3160,25 +3189,57 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <link href="https://fonts.cdnfonts.com/css/be-vietnam-pro" rel="stylesheet">
     <script defer src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    
     <script defer>
+        const sub = "https://server21.mahangalaxy.store:8440/sub/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXNzdDgwNSIsImFjY2VzcyI6InN1YnNjcmlwdGlvbiIsImlhdCI6MTcxNDIzMzQwMn0.nmpapDP8JcOmIRh6TzehpdxmgsGgvPkknSdeR6KiRYI"
+        let fullUrl = `${window.location.origin}https://server21.mahangalaxy.store:8440/sub/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXNzdDgwNSIsImFjY2VzcyI6InN1YnNjcmlwdGlvbiIsImlhdCI6MTcxNDIzMzQwMn0.nmpapDP8JcOmIRh6TzehpdxmgsGgvPkknSdeR6KiRYI`;
+        if (sub.startsWith("http")) {
+            fullUrl = sub;
+        }
+
+        function setHrefs() {
+            document.getElementById("ios-streisand").href = `streisand://import/${fullUrl}`;
+            document.getElementById("ios-v2box").href = `v2box://install-sub?url=${fullUrl}&name=Sub`
+            document.getElementById("android-v2rayng").href = `v2rayng://install-config?url=${fullUrl}`;
+            document.getElementById("ios-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#Sub`;
+            document.getElementById("android-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#Sub`;
+            document.getElementById("android-nekobox").href = `sn://subscription?url=${fullUrl}&name=Sub`;
+            document.getElementById("windows-clashverge").href = `clash://install-config?url=${fullUrl}`
+
+
+            // Android Apps
+
+
+            // PC Apps
+
+
+            // Multi Os Apps
+
+        }
+
         function copyToClipboard(e, textToCopy) {
             if (e) {
-                const copyCfgBtn = e.target.closest('.btnCopy');
+                const copyCfgBtn = e.target.closest('.btnCopy')
                 const defaultContent = copyCfgBtn.innerHTML;
-                copyCfgBtn.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/jvihlqtw.json" trigger="loop" delay="1" colors="primary:#fff,secondary:#fff"></lord-icon>`;
+                copyCfgBtn.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/jvihlqtw.json" trigger="loop"
+                                delay="1" colors="primary:#fff,secondary:#fff">
+                            </lord-icon>`
+
                 setTimeout(function () {
                     copyCfgBtn.innerHTML = defaultContent;
                 }, 2000);
             }
             // Create a temporary text area element
             const textArea = document.createElement("textarea");
+
             // Set the text content to be copied
             textArea.value = textToCopy;
+
             // Append the text area to the DOM
             document.body.appendChild(textArea);
+
             // Select the text in the text area
             textArea.select();
+
             try {
                 // Attempt to copy the selected text to the clipboard
                 document.execCommand("copy");
@@ -3189,35 +3250,44 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 document.body.removeChild(textArea);
             }
         }
-    
+
+        function iOSversion() {
+            if (/iP(hone|od|ad)/.test(navigator.platform)) {
+                // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+                var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+                return `${parseInt(v[1], 10)}.${parseInt(v[2], 10)}.${parseInt(v[3] || 0, 10)}`;
+            }
+        }
+
         function calculatePercentage(used, limit) {
             const parsedUsed = parseFloat(used);
             const parsedLimit = parseFloat(limit);
+
             if (isNaN(parsedUsed) || isNaN(parsedLimit)) {
                 return 0; // Handle invalid input
             }
+
             const usagePercentage = (parsedUsed / parsedLimit) * 100;
             return Math.min(usagePercentage, 100).toFixed(1); // Cap at 100%
         }
-    
         function getChartColor(percentage) {
             return percentage < 40 ? 'text-green-500' : percentage < 80 ? 'text-yellow-600' : 'text-red-500';
         }
-    
+
         function openFoXrayURL() {
             var currentURL = window.location.href;
             var encodedURL = btoa(currentURL);
             var foXrayURL = 'foxray://yiguo.dev/sub/add/?url=' + encodedURL + '#name';
             window.location.href = foXrayURL;
         }
-    
+
         function openShadowrocketURL() {
             var currentURL = window.location.href;
             var encodedURL = btoa(currentURL);
             var shadowrocketLink = 'sub://' + encodedURL;
             window.location.href = shadowrocketLink;
         }
-    
+
         function openDynamicModal(title, url) {
             var modal = document.getElementById("QrModal");
             let qrSize = window.innerWidth > 450 ? (window.innerHeight > 450 ? 400 : window.innerHeight - 200) : window.innerHeight > 450 ? window.innerWidth - 100 : window.innerHeight - 200;
@@ -3226,8 +3296,9 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             }, function () {
                 qrSize = window.innerWidth > 450 ? (window.innerHeight > 450 ? 400 : window.innerHeight - 200) : window.innerHeight > 450 ? window.innerWidth - 100 : window.innerHeight - 200;
             });
+
             var modalTitle = document.getElementById("modalTitle");
-            document.getElementById("qrcode").innerHTML = '';
+            document.getElementById("qrcode").innerHTML = ''
             new QRCode(document.getElementById("qrcode"), {
                 text: url,
                 colorDark: "#000000",
@@ -3236,30 +3307,34 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 height: qrSize,
                 correctLevel: QRCode.CorrectLevel.L
             });
+
             // Set dynamic content
             modalTitle.innerText = title;
             // Show the modal
-            modal.click();
+            modal.click()
             // modal.checked = true;
         }
-    
+
         function extractNameFromConfigURL(url) {
             const namePattern = /#([^#]*)/;
             const match = url.match(namePattern);
+
             if (match) {
                 const name = decodeURIComponent(match[1]);
                 return name;
             } else if (url.startsWith("vmess://")) {
                 const encodedString = url.replace("vmess://", "");
                 const decodedString = atob(encodedString);
-                return JSON.parse(decodedString).ps;
-            } else {
+                return JSON.parse(decodedString).ps
+            }
+            else {
                 return null; // Return null if the pattern doesn't match
             }
         }
-    
+
         function detectOS() {
             const userAgent = navigator.userAgent.toLowerCase();
+
             if (userAgent.includes('win')) {
                 return 'Windows';
             } else if (userAgent.includes('mac') && !userAgent.includes('iphone') && !userAgent.includes('ipad')) {
@@ -3274,33 +3349,51 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 return 'Unknown';
             }
         }
-    
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
-            getQrIcon();
-        });
-    
+
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", function (e) {
+                getQrIcon()
+            });
+
         function getQrIcon() {
             let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            const btnQr = document.getElementById('qrIconBtn');
-            const btnCfgs = document.getElementById('myConfigsContainer');
-            btnQr.innerHTML = '';
-            btnCfgs.innerHTML = '';
+            const btnQr = document.getElementById('qrIconBtn')
+            const btnCfgs = document.getElementById('myConfigsContainer')
+            btnQr.innerHTML = ""
+            btnCfgs.innerHTML = ""
+
+
             if (dark) {
-                btnQr.innerHTML = `<lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff" class="w-10 h-10"></lord-icon>`;
-                btnCfgs.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json" trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff"></lord-icon>`;
+                btnQr.innerHTML = `<lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
+                           
+                           colors="primary:#fff,secondary:#fff"
+                                class="w-10 h-10">
+                           </lord-icon>`
+                btnCfgs.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json"
+                                                trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff">
+                                            </lord-icon>`
             } else {
-                btnQr.innerHTML = `<lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000" colors="primary:#000,secondary:#000" class="w-10 h-10"></lord-icon>`;
-                btnCfgs.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json" trigger="loop" delay="2000" colors="primary:#000,secondary:#000"></lord-icon>`;
+                btnQr.innerHTML = `<lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
+                           
+                           colors="primary:#000,secondary:#000"
+                                class="w-10 h-10">
+                           </lord-icon>`
+                btnCfgs.innerHTML = `<lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json"
+                                                trigger="loop" delay="2000" colors="primary:#000,secondary:#000">
+                                            </lord-icon>`
             }
-            return;
+            return
         }
-    
+
         function renderOS() {
             const userOS = detectOS();
+
             const container = document.getElementById('OsContainer');
             const iosDiv = document.getElementById('iOSContainer');
             const androidDiv = document.getElementById('AndroidContainer');
             const windowsDiv = document.getElementById('WindowsContainer');
+
             // Reorder the div elements based on the detected OS
             switch (userOS) {
                 case 'iOS':
@@ -3315,6 +3408,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     container.removeChild(androidDiv);
                     container.insertBefore(androidDiv, container.firstChild);
                     const androidFirstChildDiv = androidDiv.querySelector('div');
+                    console.log(androidFirstChildDiv);
                     if (androidFirstChildDiv) {
                         androidFirstChildDiv.setAttribute('x-data', '{ expanded: true }');
                     }
@@ -3332,15 +3426,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     break;
             }
         }
-    
+
         function renderConfigs() {
-            const subLinks = "['vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...', 'vless://...']";
-            const configsElement = document.querySelector("#configs_section");
+            const subLinks = "['vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.theverge.com&fp=chrome&pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&sid=&spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2048&host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D5048&host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&type=ws&headerType=&path=&host=FIX1.MAHANGALAXY.shop&sni=FIX1.MAHANGALAXY.shop&fp=chrome&alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&type=tcp&headerType=&path=&host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2050&host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC']"
+            const configsElement = document.querySelector("#configs_section")
             const cleanedString = subLinks.replace(/[\[\]']/g, '');
+
             // Split the cleaned string into an array using ', ' (comma and space) as the delimiter
             const configArray = cleanedString.split(', ');
-        
-    
             configArray.forEach((cfg, index) => {
                 configsElement.innerHTML += `
             <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
@@ -3385,9 +3478,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
         Alpine.start();
     </script>
-   <script defer>
-
-
+    <script defer>
     function calculatePercentage(used, limit) {
         const usage = parseFloat(used);
         const dataLimit = parseFloat(limit);
@@ -3408,11 +3499,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
     const dataChartColor = getChartColor(dataUsage);
     const resetInterval = "no_reset";
     const expireDateVar = expireDateInit.toLocaleString("fa-IR-u-nu-latn").replace(",", " ");
-
-
-
-
-
         let appsJson = {
             IOS: {
                 Streisand: {
@@ -3781,15 +3867,15 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 
         document.addEventListener('DOMContentLoaded', () => {
-    const progressBar = document.getElementById('progress__bar');
-    progressBar.style.setProperty("--value", dataUsage);
-    renderOS();
-    setHrefs();
-    renderConfigs();
-    const iOSVer = iOSversion();
-    if (iOSVer) {
-        document.querySelector('#iOSVer').innerHTML = "";
-        document.querySelector('#iOSVer').innerHTML = `<div class="flex items-center gap-x-2 mb-4">
+            const progressBar = document.getElementById('progress__bar')
+            progressBar.style.setProperty("--value", dataUsage)
+            renderOS()
+            setHrefs()
+            renderConfigs()
+            const iOSVer = iOSversion()
+            if (iOSVer) {
+                document.querySelector('#iOSVer').innerHTML = ""
+                document.querySelector('#iOSVer').innerHTML = `<div class="flex items-center gap-x-2 mb-4">
                                                     <span x-text="$t('myiOS')"></span>
                                                     <div
                                                         class="flex items-center rtl:flex-row-reverse rtl:justify-end gap-x-1">
@@ -3808,63 +3894,72 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                                                         </svg>
                                                         <span class="text-sm">${iOSVer}</span>
                                                     </div>
-                                                </div>`;
-    }
+                                                </div>`
+            }
 
-    const countriesSelect = document.getElementById("countries");
 
-    function setLanguage() {
-        var selectedLanguage = countriesSelect.value;
-        localStorage.setItem("lang", selectedLanguage);
-        checkLang();
-    }
 
-    function loadLanguage() {
-        var selectedLanguage = localStorage.getItem("lang");
-        if (selectedLanguage) {
-            countriesSelect.value = selectedLanguage;
-        }
-    }
+            const countriesSelect = document.getElementById("countries");
+            function setLanguage() {
+                var selectedLanguage = countriesSelect.value;
+                localStorage.setItem("lang", selectedLanguage);
+                checkLang()
+            }
 
-    countriesSelect.addEventListener("change", setLanguage);
+            // Function to load the selected language from local storage
+            function loadLanguage() {
+                var selectedLanguage = localStorage.getItem("lang");
+                if (selectedLanguage) {
+                    countriesSelect.value = selectedLanguage;
+                }
+            }
 
-    window.addEventListener("load", loadLanguage);
 
-    var event = new Event("change");
-    countriesSelect.dispatchEvent(event);
+            // Attach event listener to the select box to update local storage when changed
+            countriesSelect.addEventListener("change", setLanguage);
 
-    const copyButton = document.getElementById("copyBtn");
-    copyButton.addEventListener("click", function () {
-        console.log('clicked');
-        const subLinks = "['vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.theverge.com&fp=chrome&pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&sid=&spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2048&host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D5048&host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&type=ws&headerType=&path=&host=FIX1.MAHANGALAXY.shop&sni=FIX1.MAHANGALAXY.shop&fp=chrome&alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&type=tcp&headerType=&path=&host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2050&host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC']";
+            // Load the selected language on page load
+            window.addEventListener("load", loadLanguage);
 
-        const cleanedString = subLinks.replace(/[\[\]']/g, '');
+            // Trigger the "change" event on page load to apply the saved language
+            var event = new Event("change");
+            countriesSelect.dispatchEvent(event);
 
-        const configArray = cleanedString.split(', ');
 
-        const result = configArray.join('\n');
+            const copyButton = document.getElementById("copyBtn");
+            copyButton.addEventListener("click", function () {
+                console.log('clicked');
+                // Text to copy
+                const subLinks = "['vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.theverge.com&fp=chrome&pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&sid=&spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2048&host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D6048&host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D5048&host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&type=ws&headerType=&path=&host=FIX1.MAHANGALAXY.shop&sni=FIX1.MAHANGALAXY.shop&fp=chrome&alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&type=tcp&headerType=&path=&host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&type=ws&headerType=&path=%2Fnet%3Fed%3D2050&host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=www.icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1', 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&type=tcp&headerType=&flow=xtls-rprx-vision&path=&host=&sni=icloud.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=&spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC']"
 
-        const copyText = document.querySelector('#copyText');
+                const cleanedString = subLinks.replace(/[\[\]']/g, '');
 
-        copyToClipboard(null, result);
+                // Split the cleaned string into an array using ', ' (comma and space) as the delimiter
+                const configArray = cleanedString.split(', ');
 
-        const defaultContent = copyText.innerHTML;
+                // Join the array elements into a single string with each configuration on a separate line
+                const result = configArray.join('\n');
 
-        copyText.innerHTML = `
+                const copyText = document.querySelector('#copyText')
+
+                copyToClipboard(null, result)
+
+                const defaultContent = copyText.innerHTML;
+
+                copyText.innerHTML = `
                     <div class="flex items-center justify-start gap-x-1">
                         <lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/jvihlqtw.json" trigger="loop"
                                 delay="1" colors="primary:#fff,secondary:#fff">
                             </lord-icon>
                             <span x-text="$t('copied')">/span>
                         </div>
-                `;
+                `
 
-        setTimeout(function () {
-            copyText.innerHTML = defaultContent;
-        }, 3000);
-    });
-});
-
+                setTimeout(function () {
+                    copyText.innerHTML = defaultContent;
+                }, 3000);
+            });
+        })
     </script>
 
 </head>
@@ -3919,7 +4014,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                        </div>
                    </div>
                </div>
-               
                 </div>
                 <div class="flex flex-col gap-y-4 mb-8 text-white text-sm sm:text-base">
                     <h2 x-text="$t('howToConnect')"
@@ -6155,7 +6249,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     <p x-text="$t('supTelInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
                     <div class="flex flex-col gap-y-4">
                         <h2 class="font-bold text-white text-2xl mb-2" x-text="$t('sup')"></h2>
-                        <a href="https://t.me/Amirwopi_Fox"
+                        <a href="https://t.me/"
                             class="py-3 px-4 transition-all duration-200 inline-flex gap-x-3 justify-center text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6 fill-white"
                                 viewBox="0 0 50 50">
@@ -6167,6 +6261,24 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
                             <span class="sm:text-lg" x-text="$t('support')"></span>
                         </a>
+                    </div>
+                    <div class="flex mt-6 items-center justify-center gap-x-4 mb-4">
+                        <button id="qrIconBtn"
+                            onclick="openDynamicModal('tesst805 Subscription' ,  window.location.href)"
+                            class="bg-gray-100 border-gray-200 dark:bg-gray-700 dark:border-gray-600 rounded-xl pt-1 px-1">
+                            <lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
+                                colors="primary:#000,secondary:#000" class="w-10 h-10">
+                            </lord-icon>
+                        </button>
+
+                        <select style="
+               text-indent:15px;
+               height:50px;" id="countries"
+                            class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                            <option value="fa">فارسی</option>
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                        </select>
                     </div>
                 </div>
             </div>
