@@ -1,0 +1,11 @@
+.elementor-widget-icon-box .elementor-icon-box-title, .elementor-widget-icon-box .elementor-icon-box-title a {
+    font-family: IRANSansWeb_Medium !important;
+}
+
+.elementor-widget-icon-box .elementor-icon-box-description, .elementor-widget-text-editor {
+    font-family: IRANSansWeb !important;
+}
+
+.elementor-text-editor p {
+    font-size: unset;
+}

@@ -1,0 +1,11 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider img {
+        display: none;
+    }
+
+    .smart_connection {
+        margin-bottom: 20px;
+    }
+
+
+}

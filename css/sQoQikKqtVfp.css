@@ -1,0 +1,121 @@
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .logo {
+        text-align: center !important;
+        display: inline-block !important;
+    }
+
+    .header_base {
+        height: auto !important;
+    }
+
+    .header_base:before {
+        left: 0;
+        top: 0;
+    }
+
+    .feature_row {
+        margin-top: 30px !important;
+        display: none;
+    }
+
+    .menu .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+    .menu .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: #00f2a9;
+    }
+
+    .menu .navbar-default .navbar-toggle {
+        border-color: #00f2a9;
+    }
+
+    .menu .navbar-left {
+        float: none !important;
+    }
+
+    .menu .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: transparent;
+    }
+
+    .menu .container-fluid {
+        padding-left: 15px !important;
+    }
+
+    .menu .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+        padding-left: 15px !important;
+    }
+
+    .slider {
+        margin-bottom: 100px;
+        margin-top: 10px;
+    }
+
+    .slider img {
+        display: none;
+    }
+
+    .feature {
+        margin-top: 0;
+    }
+
+    .download_connection {
+        padding-top: 20px;
+    }
+
+    .smart_connection {
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+
+    .smart_connection span {
+        font-size: 20px;
+        margin-left: 0;
+
+    }
+
+    .smart_connection i {
+        float: none;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .telegram {
+        text-align: center;
+
+    }
+
+    .telegram span {
+        font-size: 20px;
+        margin-left: 0;
+
+    }
+
+    .telegram i {
+        float: none;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .support .btn {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+
+    .footer .copyright .footer_menu {
+        float: none !important;
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .footer_menu ul li {
+        display: block;
+        float: none !important;
+        margin-right: 0 !important;
+    }
+
+}
