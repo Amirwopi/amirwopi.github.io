@@ -1,0 +1,370 @@
+<div class="collapse-arrow dark:text-white bg-gradient-to-r dark:from-gray-600 dark:via-gray-700 dark:to-gray-800 from-slate-100 via-slate-200 to-slate-300 text-black transition-all duration-300 font-medium rounded-2xl">
+                        <!-- Accordion item -->
+                        <div x-data="{ expanded: false }">
+                            <h2>
+                                <button id="faqs-title-01" type="button" class="flex p-4 rtl:pl-0 items-center justify-between w-full text-left font-semibold" @click="expanded = !expanded" :aria-expanded="expanded" aria-controls="faqs-text-01" aria-expanded="false">
+                                    <div class="flex items-center justify-start gap-x-2 text-lg sm:text-xl font-medium">
+                                        <div id="myConfigsContainer" class="w-8 h-8"><lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json" trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff">
+                                            </lord-icon></div>
+                                        <span x-text="$t('myConfigs')">کانفیگ های من</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" :class="{'!rotate-180': expanded}" class="w-6 h-6 mx-6 transform origin-center transition duration-200 ease-out">
+                                        <path strokelinecap="round" strokelinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="faqs-text-01" role="region" aria-labelledby="faqs-title-01" class="grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0" :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
+                                <div class="overflow-hidden">
+                                    <div class="p-4 pb-6">
+                                        <div id="configs_section" style="direction: ltr;" class="flex flex-col gap-y-2 pt-4">
+                                            <button id="copyBtn" class="flex mb-4 items-center justify-between bg-slate-950 px-4 py-3 text-center rounded-lg">
+                                                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff" class="w-10 h-10">
+                                                </lord-icon>
+                                                <span x-text="$t('copyAllCfgs')" id="copyText">کپی کردن همه کانفیگ ها</span>
+                                                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff" class="w-10 h-10">
+                                                </lord-icon>
+                                            </button>
+                                        
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">tesst805   |📊 0 B  |📅 ∞  🪫</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-0" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.theverge.com&amp;fp=chrome&amp;pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&amp;sid=&amp;spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700 opacity-0 invisible" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(481px, 454px);" data-popper-escaped="" data-popper-placement="top" data-popper-reference-hidden="">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.theverge.com&amp;fp=chrome&amp;pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&amp;sid=&amp;spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datsdfa.com:1?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.theverge.com&amp;fp=chrome&amp;pbk=C7Yz5zclRKx0qmZhgiadI2FW7nEeAa34ElJtquGpvx8&amp;sid=&amp;spx=#tesst805%20%20%20%7C%F0%9F%93%8A%200%20B%20%20%7C%F0%9F%93%85%20%E2%88%9E%20%20%F0%9F%AA%AB')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700 opacity-0 invisible" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(536px, 454px);" data-popper-escaped="" data-popper-placement="top" data-popper-reference-hidden="">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">❤️ بروزرسانی اشتراک (روزانه)</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-1" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2048&amp;host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2048&amp;host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@datdfsa.com:3?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2048&amp;host=#%E2%9D%A4%EF%B8%8F%20%D8%A8%D8%B1%D9%88%D8%B2%D8%B1%D8%B3%D8%A7%D9%86%DB%8C%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%20%28%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87%29')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همراه اول‌' |🇩🇪</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-2" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%27%20%7C%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همراه اول‌ | 🇳🇱</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-3" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%20%F0%9F%87%B3%F0%9F%87%B1')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همراه اول‌ |🇩🇪</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-4" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D6048&amp;host=B.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%E2%80%8C%20%7C%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همراه اول |🇦🇱 (no ads)</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-5" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D5048&amp;host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D5048&amp;host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cc.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D5048&amp;host=B1.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%A6%F0%9F%87%B1%20%28no%20ads%29')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همه‌نت‌ |🇳🇱 </span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-6" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&amp;type=ws&amp;headerType=&amp;path=&amp;host=FIX1.MAHANGALAXY.shop&amp;sni=FIX1.MAHANGALAXY.shop&amp;fp=chrome&amp;alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&amp;type=ws&amp;headerType=&amp;path=&amp;host=FIX1.MAHANGALAXY.shop&amp;sni=FIX1.MAHANGALAXY.shop&amp;fp=chrome&amp;alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@cdn.hamkarpanel.online:443?security=tls&amp;type=ws&amp;headerType=&amp;path=&amp;host=FIX1.MAHANGALAXY.shop&amp;sni=FIX1.MAHANGALAXY.shop&amp;fp=chrome&amp;alpn=h2%2Chttp%2F1.1#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%E2%80%8C%D9%86%D8%AA%E2%80%8C%20%7C%F0%9F%87%B3%F0%9F%87%B1%20')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰وای فای ‌🇹🇷 | تانل </span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-7" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&amp;type=tcp&amp;headerType=&amp;path=&amp;host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&amp;type=tcp&amp;headerType=&amp;path=&amp;host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@217.219.212.40:1892?security=none&amp;type=tcp&amp;headerType=&amp;path=&amp;host=nobitex.ir#%F0%9F%94%B0%D9%88%D8%A7%DB%8C%20%D9%81%D8%A7%DB%8C%20%E2%80%8C%F0%9F%87%B9%F0%9F%87%B7%20%7C%20%D8%AA%D8%A7%D9%86%D9%84%20')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همراه اول |🇮🇹 </span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-8" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2050&amp;host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2050&amp;host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@wifi.mahangalaxy.shop:2052?security=none&amp;type=ws&amp;headerType=&amp;path=%2Fnet%3Fed%3D2050&amp;host=EDD.MAHANGALAXY.SHOP#%F0%9F%94%B0%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20%7C%F0%9F%87%AE%F0%9F%87%B9%20')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰  همه اپراتور|  🇩🇪</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-9" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:102?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=www.icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%A9%F0%9F%87%AA')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همه اپراتور|  🇫🇷</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-10" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:106?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AB%F0%9F%87%B7')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همه اپراتور|  🇮🇱</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-11" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:107?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%AE%F0%9F%87%B1')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            
+            <div class="flex items-center bg-slate-900 px-4 py-2 rounded-lg">
+                                    <span class="flex-1">🔰 همه اپراتور|  🇳🇬</span>
+                                    <div class="flex items-center justify-start gap-x-2">
+                                        <div class="w-10 h-10 overflow-hidden">
+                                            <button id="copyCfg-12" onclick="copyToClipboard(event,'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC')" data-tooltip-target="copyLink" type="button" class="btnCopy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('copyLink')" id="copyLink" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کپی کردن</div>
+                                        </div>
+                                        <div class="w-10 h-10 overflow-hidden">
+
+                                            <button onclick="openDynamicModal(extractNameFromConfigURL('vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC'), 'vless://e01c7bb1-1d6c-44fe-addf-3a80aad0cc2a@en.hamkarpanel.online:109?security=reality&amp;type=tcp&amp;headerType=&amp;flow=xtls-rprx-vision&amp;path=&amp;host=&amp;sni=icloud.com&amp;fp=chrome&amp;pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&amp;sid=&amp;spx=#%F0%9F%94%B0%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%7C%20%20%F0%9F%87%B3%F0%9F%87%AC')" data-tooltip-target="qrCode" type="button" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-8 h-8 fill-white">
+  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd"></path>
+</svg>
+
+                                            </button>
+                                            <div x-text="$t('qrCode')" id="qrCode" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">کیوآرکد</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
